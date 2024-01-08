@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名字卡片生成器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #d5ee9d; /* 設定背景色 */
+        }
+        #card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff; /* 設定卡片背景色 */
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>名字卡片生成器</h1>
+    <label for="name">輸入你的名字：</label>
+    <input type="text" id="name" placeholder="輸入你的名字">
+    <button onclick="generateCard()">生成卡片</button>
+
+    <div id="card"></div>
+
+    <script>
+        function generateCard() {
+            var name = document.getElementById('name').value;
+            var card = document.getElementById('card');
+            card.innerHTML = "<h2>你的名字：</h2><p>" + name + "</p>";
+        }
+    </script>
+</body>
+</html>
